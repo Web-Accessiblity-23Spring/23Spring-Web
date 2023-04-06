@@ -34,12 +34,14 @@
                 <button
                   class="btn btn-dark font-increase-button"
                   id="font-increase-button"
+                  aria-label="increase the fontsize"
                 >
                   A+
                 </button>
                 <button
                   class="btn btn-dark font-decrease-button"
                   id="font-decrease-button"
+                  aria-label="descrease the fontsize"
                 >
                   A-
                 </button>
@@ -50,7 +52,7 @@
       </div>
     </header>
 
-    <div class="container-fluid bg-dark nav">
+    <nav role="navigation" class="container-fluid bg-dark nav">
       <div class="container">
         <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
           <div class="navbar-brand d-lg-none">
@@ -204,9 +206,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="container main" id="main">
+    <main role="main" class="container main" id="main">
       <div class="row no-gutters">
         <div class="col-12 col-lg-6">
           <div class="p-4 mt-4 mr-lg-3 bg-white news">
@@ -328,9 +330,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
-    <div class="container-fluid bg-dark mt-4 footer">
+    <footer role="contentinfo" class="container-fluid bg-dark mt-4 footer">
       <div class="container text-center py-3">
         <div class="row justify-content-around">
           <a
@@ -360,7 +362,7 @@
           >
         </div>
       </div>
-    </div>
+    </footer>
 
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>

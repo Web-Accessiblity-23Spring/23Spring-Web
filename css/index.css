@@ -10,3 +10,26 @@
 .studies li {
     margin-top: 1.2rem
 }
+
+/* Exercise 3 - Skip Links */
+.link-skip{
+    display: block;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden; 
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+  background: #000;
+  color: #fff;
+}
+
+/* Exercise 3 - Skip Links */
+.link-skip:focus   {
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }

@@ -210,10 +210,14 @@
       <div class="row no-gutters">
         <div class="col-12 col-md-5 mt-4 login">
           <div class="p-4 mr-md-3 bg-white">
-            <div class="text-primary mb-4 title">Login</div>
-            <div class="text-danger mb-4 d-none subtitle" id="login-error">
+            <h1 class="text-primary mb-4 title">Login</h1>
+            <h2
+              class="text-danger mb-4 d-none subtitle"
+              id="login-error"
+              aria-live="assertive"
+            >
               Please correct the error(s)
-            </div>
+            </h2>
             <ul class="sr-only" id="login-error-list"></ul>
             <form id="login-form" novalidate>
               <div class="form-group">
@@ -227,9 +231,7 @@
                   style="position: relative; top: 10px"
                 />
 
-                <small class="invalid-feedback"
-                  >The email input has error(s)</small
-                >
+                <small class="invalid-feedback" id="login-email-error"> </small>
               </div>
               <div class="form-group">
                 <label style="position: relative">Password</label>
@@ -240,9 +242,10 @@
                   placeholder="Password"
                   style="position: relative; top: 10px"
                 />
-                <small class="invalid-feedback"
-                  >The password input has error(s)</small
-                >
+                <small
+                  class="invalid-feedback"
+                  id="login-password-error"
+                ></small>
               </div>
               <div class="form-group">
                 <div class="form-check">
@@ -276,19 +279,20 @@
         <div class="col-12 col-md-7 mt-4 register">
           <div class="p-4 bg-white">
             <div class="text-primary mb-4 title">Create new account</div>
-            <div class="text-danger mb-4 d-none subtitle" id="register-error">
-              Please correct the error(s)
-            </div>
+            <div
+              class="text-danger mb-4 d-none subtitle"
+              id="register-error"
+            ></div>
             <ul class="sr-only" id="register-error-list"></ul>
             <form id="register-form" novalidate>
-              <div class="form-group">
-                <p class="form-label" id="register-basic-legend">
+              <fieldset class="form-group">
+                <legend class="form-label" id="register-basic-legend">
                   Basic information
                   <small class="text-secondary">(optional)</small>
-                </p>
+                </legend>
                 <div class="form-row">
                   <div class="form-group col-12 col-lg-6">
-                    <p>First name</p>
+                    <label>First name</label>
                     <input
                       class="form-control"
                       type="text"
@@ -296,10 +300,13 @@
                       placeholder="First name"
                       required
                     />
-                    <small class="invalid-feedback"></small>
+                    <small
+                      class="invalid-feedback"
+                      id="register-first-name-error"
+                    ></small>
                   </div>
                   <div class="form-group col-12 col-lg-6">
-                    <p>Last name</p>
+                    <label>Last name</label>
                     <input
                       class="form-control"
                       type="text"
@@ -307,11 +314,14 @@
                       placeholder="Last name"
                       required
                     />
-                    <small class="invalid-feedback"></small>
+                    <small
+                      class="invalid-feedback"
+                      id="register-last-name-error"
+                    ></small>
                   </div>
                 </div>
                 <div class="form-group">
-                  <p>Email</p>
+                  <label>Email</label>
                   <input
                     class="form-control"
                     id="register-email-control"
@@ -319,10 +329,13 @@
                     placeholder="Email"
                     required
                   />
-                  <small class="invalid-feedback"></small>
+                  <small
+                    class="invalid-feedback"
+                    id="register-email-error"
+                  ></small>
                 </div>
                 <div class="form-group">
-                  <p>Password</p>
+                  <label>Password</label>
                   <input
                     class="form-control"
                     id="register-password-control"
@@ -330,7 +343,10 @@
                     placeholder="Password"
                     required
                   />
-                  <small class="invalid-feedback"></small>
+                  <small
+                    class="invalid-feedback"
+                    id="register-password-error"
+                  ></small>
                   <small
                     id="register-password-help"
                     class="form-text text-muted"
@@ -339,7 +355,7 @@
                   >
                 </div>
                 <div class="form-group">
-                  <p>Programme</p>
+                  <label>Programme</label>
                   <select
                     class="form-control"
                     id="register-programme-control"
@@ -353,16 +369,19 @@
                     <option value="continuing">Continuing education</option>
                     <option value="doctorate">Doctorate</option>
                   </select>
-                  <small class="invalid-feedback"></small>
+                  <small
+                    class="invalid-feedback"
+                    id="register-programme-error"
+                  ></small>
                 </div>
-              </div>
-              <div class="form-group">
-                <p class="form-label" id="register-address-legend">
+              </fieldset>
+              <fieldset class="form-group">
+                <legend class="form-label" id="register-address-legend">
                   Additional information
                   <small class="text-secondary">(optional)</small>
-                </p>
+                </legend>
                 <div class="form-group">
-                  <p>Street</p>
+                  <label>Street</label>
                   <input
                     class="form-control"
                     id="register-street-control"
@@ -372,7 +391,7 @@
                 </div>
                 <div class="form-row">
                   <div class="form-group col-12 col-lg-5">
-                    <p>City</p>
+                    <label>City</label>
                     <input
                       class="form-control"
                       id="register-city-control"
@@ -381,7 +400,7 @@
                     />
                   </div>
                   <div class="form-group col-12 col-lg-4">
-                    <p>State</p>
+                    <label>State</label>
                     <input
                       class="form-control"
                       id="register-state-control"
@@ -390,7 +409,7 @@
                     />
                   </div>
                   <div class="form-group col-12 col-lg-3">
-                    <p>Zip</p>
+                    <label>Zip</label>
                     <input
                       class="form-control"
                       id="register-zip-control"
@@ -399,7 +418,7 @@
                     />
                   </div>
                 </div>
-              </div>
+              </fieldset>
               <button class="btn btn-primary" id="register-register-button">
                 Register
               </button>

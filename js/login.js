@@ -165,7 +165,7 @@ function register(event) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     document
         .getElementById('login-login-button')
         .addEventListener('click', login, false);
@@ -178,3 +178,100 @@ document.addEventListener('DOMContentLoaded', function() {
         .getElementById('register-register-button')
         .addEventListener('click', register, false);
 }, false);
+
+/**
+ * Login form validation 
+ */
+function loginValidate() {
+    let hasError = false;
+    var emailControl = document.getElementById('login-email-control');
+    var emialError = document.getElementById('login-email-error');
+    var pwdControl = document.getElementById('login-password-control');
+    var pwdError = document.getElementById('login-password-error');
+    var errorHeading = document.getElementById('login-error');
+    if (!emailControl.validity.valid) {
+        emialError.innerHTML = 'Please correct the email';
+        hasError = true;
+    } else {
+        emialError.innerHTML = '';
+    }
+
+    if (pwdControl.validity.valid) {
+        pwdError.innerHTML = 'Please correct the password';
+        hasError = true;
+    } else {
+        pwdError.innerHTML = '';
+    }
+
+    if (hasError) {
+        errorHeading.innerHTML = 'Please correct the errors';
+    } else {
+        errorHeading.innerHTML = '';
+    }
+}
+
+const logBtn = document.getElementById('login-login-button');
+
+logBtn.addEventListener('click', loginValidate);
+
+/**
+ * Register form validation 
+ */
+function registerValidate() {
+
+    let hasError = false;
+    let errorHeading = document.getElementById('register-error');
+    var firstName = document.getElementById('register-first-name-control');
+    var firstError = document.getElementById('register-first-name-error');
+    if (!firstName.validity.valid) {
+        firstError.innerHTML = 'Please correct the firstname';
+        hasError = true;
+    } else {
+        firstError.innerHTML = '';
+    }
+
+    var lastName = document.getElementById('register-last-name-control');
+    var lastNameError = document.getElementById('register-last-name-error');
+    if (!lastName.validity.valid) {
+        lastNameError.innerHTML = 'Please correct the lastname';
+        hasError = true;
+    } else {
+        lastNameError.innerHTML = '';
+    }
+
+    var email = document.getElementById('register-email-control');
+    var emailError = document.getElementById('register-email-error');
+    if (!email.validity.valid) {
+        emailError.innerHTML = 'Please correct the email';
+        hasError = true;
+    } else {
+        emailError.innerHTML = '';
+    }
+
+    var password = document.getElementById('register-password-control');
+    var passwordError = document.getElementById('register-password-error');
+    if (!password.validity.valid) {
+        passwordError.innerHTML = 'Please correct the password';
+        hasError = true;
+    } else {
+        passwordError.innerHTML = '';
+    }
+
+    var programme = document.getElementById('register-programme-control');
+    var programmeError = document.getElementById('register-programme-error');
+    if (programme.validity.valueMissing) {
+        programmeError.innerHTML = 'Please correct the password';
+        hasError = true;
+    } else {
+        programmeError.innerHTML = '';
+    }
+
+    if (hasError) {
+        errorHeading.innerHTML = 'Please correct the errors';
+    } else {
+        errorHeading.innerHTML = '';
+    }
+}
+
+const regBtn = document.getElementById('register-register-button');
+regBtn.addEventListener('click', registerValidate)

@@ -217,8 +217,14 @@
               role="img"
               src="./img/temperature.jpg"
               class="figure-img img-fluid"
+              aria-label="The graphic shows 2016 as the warmest year on record"
+              aria-describedby="description"
             />
-            <p role="note" class="figure-caption text-center px-5">
+            <p
+              role="note"
+              class="figure-caption text-center px-5"
+              id="description"
+            >
               The graphic shows the global mean surface temperature change since
               1880 till nowadays. The grey curve indicates the annual average
               temperature and the black curve shows the smoothed result. Over
@@ -243,52 +249,60 @@
               <col />
               <col />
               <colgroup span="2"></colgroup>
-              <tbody class="thead-dark">
+              <thead class="thead-dark">
                 <tr>
-                  <td class="align-middle" rowspan="2">Century</td>
-                  <td class="align-middle" rowspan="2">Year</td>
-                  <td class="align-middle" colspan="2">Temperature</td>
+                  <th scope="col" class="align-middle" rowspan="2">Century</th>
+                  <th scope="col" class="align-middle" rowspan="2">Year</th>
+                  <th scope="colgroup" class="align-middle" colspan="2">
+                    Temperature
+                  </th>
                 </tr>
                 <tr>
-                  <td class="align-middle">Average</td>
-                  <td class="align-middle">Smoothed</td>
+                  <th scope="col" class="align-middle">Average</th>
+                  <th scope="col" class="align-middle">Smoothed</th>
                 </tr>
-              </tbody>
+              </thead>
               <tbody>
                 <tr>
-                  <td class="align-middle" rowspan="2">19th century</td>
-                  <td>1880</td>
+                  <th scope="rowgroup" class="align-middle" rowspan="2">
+                    19th century
+                  </th>
+                  <th scope="row">1880</th>
                   <td>-0.20</td>
                   <td>-0.13</td>
                 </tr>
                 <tr>
-                  <td>1890</td>
+                  <th scope="row">1890</th>
                   <td>-0.37</td>
                   <td>-0.26</td>
                 </tr>
               </tbody>
               <tbody>
                 <tr>
-                  <td class="align-middle" rowspan="2">20th century</td>
-                  <td>1920</td>
+                  <th scope="rowgroup" class="align-middle" rowspan="2">
+                    20th century
+                  </th>
+                  <th scope="row">1920</th>
                   <td>-0.27</td>
                   <td>-0.26</td>
                 </tr>
                 <tr>
-                  <td>1990</td>
+                  <th scope="row">1990</th>
                   <td>0.44</td>
                   <td>0.34</td>
                 </tr>
               </tbody>
               <tbody>
                 <tr>
-                  <td class="align-middle" rowspan="2">21st century</td>
-                  <td>2000</td>
+                  <th scope="rowgroup" class="align-middle" rowspan="2">
+                    21st century
+                  </th>
+                  <th scope="row">2000</th>
                   <td>0.42</td>
                   <td>0.52</td>
                 </tr>
                 <tr>
-                  <td>2016</td>
+                  <th scope="row">2016</th>
                   <td>0.99</td>
                   <td>0.91</td>
                 </tr>

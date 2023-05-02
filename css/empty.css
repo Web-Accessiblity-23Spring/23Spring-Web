@@ -3,3 +3,7 @@ h1{
     justify-content: center;
     display: flex;
 }
+
+.text-secondary {
+    color: black !important;
+}

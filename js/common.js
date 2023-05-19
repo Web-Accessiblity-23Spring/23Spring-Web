@@ -131,3 +131,10 @@ window.addEventListener('keydown', (e) => {
         })
     }
 })
+
+docEl.addEventListener('click', (e) => {
+    for (const item of facEls) {
+        item.nextElementSibling.style.display = 'none';
+        item.setAttribute('aria-expanded', 'false');
+    }
+})

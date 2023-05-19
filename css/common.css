@@ -19,7 +19,7 @@ body p {
 
 .title {
     font-size: 2rem;
-    font-weight: 100
+    font-weight: 600
 }
 
 .subtitle {
@@ -56,6 +56,14 @@ body p {
     flex: 1 0 auto
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover,.dropdown-item:focus,.dropdown-item:active{
     background-color: gainsboro;
+    color: black !important;
+    text-decoration: underline;
+}
+.nav-link:active, .nav-link:focus, .nav-link:hover{
+    background-color: white;
+    color: black !important;
+    text-decoration: underline;
+
 }

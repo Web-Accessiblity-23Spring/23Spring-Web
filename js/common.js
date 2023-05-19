@@ -1,3 +1,6 @@
+const aplus = document.getElementsByClassName('font-increase-button');
+const aminus = document.getElementsByClassName('font-decrease-button');
+
 /**
  * Open the current clicked menu and close the other menus
  * @param {object} event - The DOM event
@@ -48,3 +51,27 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.navbar-toggler')
         .addEventListener('click', toggleNavigation, false);
 }, false);
+
+/* Exercise 2 - Accessible font size */
+for (const item of aplus) {
+    // console.log(iterator, 'element');
+    item.addEventListener('click', () => {
+        console.log('123123');
+        if (!docEl.style.fontSize) {
+            docEl.style.fontSize = '17px';
+        } else {
+            docEl.style.fontSize = parseFloat(docEl.style.fontSize) + 1 + 'px';
+        }
+    })
+}
+for (const item of aminus) {
+    // console.log(iterator, 'element');
+    item.addEventListener('click', () => {
+        console.log('123123');
+        if (!docEl.style.fontSize) {
+            docEl.style.fontSize = '17px';
+        } else {
+            docEl.style.fontSize = parseFloat(docEl.style.fontSize) - 1 + 'px';
+        }
+    })
+}

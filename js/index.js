@@ -1,26 +1,9 @@
-const aplus = document.getElementById('font-increase-button');
-const aminus = document.getElementById('font-decrease-button');
+
 const docEl = document.getElementsByTagName('html')[0];
 const facEls = document.querySelectorAll('.dropdown-toggle')
 const anchors = document.querySelectorAll('a[href^="#"]');
 
-/* Exercise 2 - Accessible font size */
-aplus.addEventListener('click', () => {
-    if (!docEl.style.fontSize) {
-        docEl.style.fontSize = '17px';
-    } else {
-        docEl.style.fontSize = parseFloat(docEl.style.fontSize) + 1 + 'px';
-    }
-})
 
-/* Exercise 2 - Accessible font size */
-aminus.addEventListener('click', () => {
-    if (!docEl.style.fontSize) {
-        docEl.style.fontSize = '15px';
-    } else {
-        docEl.style.fontSize = parseFloat(docEl.style.fontSize) - 1 + 'px';
-    }
-})
 
 /* Exercise 3 - Drop-down menu */
 facEls.forEach((facEl) => {

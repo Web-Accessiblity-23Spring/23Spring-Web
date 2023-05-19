@@ -37,11 +37,11 @@ function toggleNavigation(event) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var dropDownToggles =
         document.querySelectorAll('#nav-bar-content .dropdown-toggle');
 
-        for (var i = 0; i < dropDownToggles.length; i++) {
+    for (var i = 0; i < dropDownToggles.length; i++) {
         dropDownToggles[i].addEventListener('click', openMenu, false);
     }
 
